@@ -41,7 +41,7 @@ if st.button('Submit'):
 
     response = requests.post(url, headers=headers, json=data)
 
-    response=response.json()["messages"][1]["text"]
+    response=response.json()["result"]["messages"][1]["text"]
 
 # Check if 'previous_conversations' exists in session state
 if 'previous_conversations' not in st.session_state:
