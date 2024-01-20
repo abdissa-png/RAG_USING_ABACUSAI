@@ -25,7 +25,7 @@ if st.button('Submit'):
     #     chat_config=None, 
     #     ignore_documents=False
     # )["messages"][1]["text"]
-    url = f"https://abdissa-degefu.api.abacus.ai/api/getChatResponse?deploymentToken={st.secrets('deployment_token')}&deploymentId={st.secrets('deployment_id')}"
+    url = f"https://abdissa-degefu.api.abacus.ai/api/getChatResponse?deploymentToken={st.secrets['deployment_token']}&deploymentId={st.secrets['deployment_id']}"
     headers = {"Content-Type": "application/json"}
     data = {
         "messages": [{"is_user":True,"text":text_input}],
